@@ -1,0 +1,106 @@
+{
+
+        "burgerLinks": {
+            "undercover":"#undercover",
+            "services":"#services",
+            "portfolio":"#portfolio",
+            "feedbacks":"#feedbacks",
+            "contacts":"#contacts"
+
+        }
+     ,
+
+     "servicesTabs":{
+        "webDesign":{
+          "text":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sit aperiam velit hic impedit temporibus dignissimos praesentium vero veniam distinctio. Temporibus ullam necessitatibus aliquam expedita est. Blanditiis maiores, distinctio consequuntur vel iusto ea totam assumenda!",
+           "img":"./img/web-nout.png",
+           "nameTabs":"web design",
+           "number":1
+        },
+        "logoDesign":{
+           "text":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sit aperiam velit hic impedit temporibus dignissimos praesentium vero veniam distinctio. Temporibus ullam necessitatibus aliquam expedita est. Blanditiis maiores, distinctio consequuntur vel iusto ea totam assumenda!",
+            "img":"./img/web-nout.png",
+            "nameTabs":"logo design",
+            "number":2
+        },
+        "BRANDING":{
+            "text":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sit aperiam velit hic impedit temporibus dignissimos praesentium vero veniam distinctio. Temporibus ullam necessitatibus aliquam expedita est. Blanditiis maiores, distinctio consequuntur vel iusto ea totam assumenda!",
+             "img":"./img/web-nout.png",
+             "nameTabs":"BRANDING",
+             "number":3
+        },
+        "UI":{
+            "text":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sit aperiam velit hic impedit temporibus dignissimos praesentium vero veniam distinctio. Temporibus ullam necessitatibus aliquam expedita est. Blanditiis maiores, distinctio consequuntur vel iusto ea totam assumenda!",
+             "img":"./img/web-nout.png",
+             "nameTabs":"UI",
+             "number":4
+        },
+        "PHOTOGRAPHY":{
+            "text":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sit aperiam velit hic impedit temporibus dignissimos praesentium vero veniam distinctio. Temporibus ullam necessitatibus aliquam expedita est. Blanditiis maiores, distinctio consequuntur vel iusto ea totam assumenda!",
+             "img":"./img/web-nout.png",
+             "nameTabs":"PHOTOGRAPHY",
+             "number":5
+        },
+        "GRAPHICDESIGN":{
+            "text":"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, sit aperiam velit hic impedit temporibus dignissimos praesentium vero veniam distinctio. Temporibus ullam necessitatibus aliquam expedita est. Blanditiis maiores, distinctio consequuntur vel iusto ea totam assumenda!",
+             "img":"./img/web-nout.png",
+             "nameTabs":"GRAPHIC DESIGN",
+             "number":6
+        }
+        
+        }
+        ,
+        "portfolioCardItem":{
+            "card-item":{
+                "h3":"subsence11 <br> monochrome11",
+                "p":"11qweWeb design in monochromatic colors for <br> SUBSENCE agency.",
+                "span":"11wqeb design",
+                "img":"../img/item-1.png"
+            },
+            "card-item2":{
+                "h3":"subsence22 <br> monochrome22",
+                "p":"22qweqweWeb design in monochromatic colors for <br> SUBSENCE agency11.",
+                "span":"22web design",
+                "img":"../img/item-2.png"
+            },
+            "card-item3":{
+                "h3":"subsence33 <br> monochrome33",
+                "p":"33qqqqqWeb design in monochromatic colors for <br> SUBSENCE agency22.",
+                "span":"33web design",
+                "img":"../img/item-3.png"
+            },
+            "card-item4":{
+                "h3":"subsence44 <br> monochrome44",
+                "p":"44Web qwqeqqwe design in monochromatic colors for <br> SUBSENCE agency33.",
+                "span":"44web design",
+                "img":"../img/item-4.png"
+            }
+
+        },
+        "feedbacks":[
+            {
+                "text":"Working with thise guys was an astonishing expirience for me. I was pleased with theyre work.",
+                "author":"sarah robinson",
+                "img":"../img/photo-feedback-1.png"
+            },
+            {
+                "text":"Working with thise guys was an astonishing expirience for me. I was pleased with theyre work.",
+                "author":"sarah robinson",
+                "img":"../img/photo-feedback-2.png"
+            },
+            {
+                "text":"Working with thise guys was an astonishing expirience for me. I was pleased with theyre work.",
+                "author":"sarah robinson",
+                "img":"../img/photo-feedback-3.png"
+            }
+
+        ]
+
+        
+}
+
+    
+
+
+
+
