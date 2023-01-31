@@ -135,17 +135,17 @@
             <h2 id="portfolio">portfolio</h2>
             <div class="select-wrap">
                 <select class="select" name="portfolio" id="select-portfolio">
-                    <option value="">
-                        All categories
+                    <option   value="1">
+                        <!-- All categories -->
                     </option>
-                    <option value="">
-                        All categories 1 
+                    <option value="2">
+                        <!-- All categories 1  -->
                     </option>
-                    <option value="">
-                        All categories 2
+                    <option selected value="3">
+                        <!-- All categories 2 -->
                     </option>
-                    <option value="">
-                        All categories 3
+                    <option value="4">
+                        <!-- All categories 3 -->
                     </option>
                 </select>
             </div>
@@ -216,7 +216,7 @@
                     <h2  class="feedbacksH2 ">contact us</h2>
                     <div class="form-feedbacks-wrap">
 
-                        <form class="form-feedbacks ">
+                        <form name="formContactUs" class="form-feedbacks ">
                             <fieldset>
                               <label>
                                 <input type="text" name="name" placeholder="Name">
@@ -227,7 +227,7 @@
                               </label>
                               <br>
                               <label >
-                                <textarea placeholder="Your message" cols="60" rows="10"></textarea>
+                                <textarea name="text" placeholder="Your message" cols="60" rows="10"></textarea>
                               </label>
                             </fieldset>
                             <div class="wrap-button"><button>send</button></div>

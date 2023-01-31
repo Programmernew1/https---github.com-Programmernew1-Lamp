@@ -55,25 +55,29 @@
                 "h3":"subsence11 <br> monochrome11",
                 "p":"11qweWeb design in monochromatic colors for <br> SUBSENCE agency.",
                 "span":"11wqeb design",
-                "img":"../img/item-1.png"
+                "img":"../img/item-1.png",
+                "category":"UI"
             },
             "card-item2":{
                 "h3":"subsence22 <br> monochrome22",
                 "p":"22qweqweWeb design in monochromatic colors for <br> SUBSENCE agency11.",
                 "span":"22web design",
-                "img":"../img/item-2.png"
+                "img":"../img/item-2.png",
+                "category":"UI"
             },
             "card-item3":{
                 "h3":"subsence33 <br> monochrome33",
                 "p":"33qqqqqWeb design in monochromatic colors for <br> SUBSENCE agency22.",
                 "span":"33web design",
-                "img":"../img/item-3.png"
+                "img":"../img/item-3.png",
+                "category":"BRANDING"
             },
             "card-item4":{
                 "h3":"subsence44 <br> monochrome44",
                 "p":"44Web qwqeqqwe design in monochromatic colors for <br> SUBSENCE agency33.",
                 "span":"44web design",
-                "img":"../img/item-4.png"
+                "img":"../img/item-4.png",
+                "category":"BRANDING"
             }
 
         },

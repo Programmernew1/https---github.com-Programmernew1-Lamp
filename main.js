@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 //  if (menuUl.classList.contains('js-visible')){
-//     console.log('est');
+//     //console.log('est');
 //  }
 
 
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function(){
         let testArray = data.servicesTabs;
         let inputPortfolio = `<option value="">All categories</option>`;
         for(let z in testArray){
-            let a = `<option value="">${testArray[z].nameTabs}</option>`;
+            let a = `<option value="${z}">${testArray[z].nameTabs}</option>`;
             inputPortfolio += a;
         }
         
@@ -185,6 +185,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
         let portfolioCardContent = "";
         for( let k in portfolioCardItem){
+
+
             let content = `<div  class="portfolio-card-item item col-lg-5" style="background:url('${portfolioCardItem[k].img}');" ><div class="card-item-content">
                 <h3>${portfolioCardItem[k].h3}</h3>
                 <p>${portfolioCardItem[k].p}
@@ -197,6 +199,31 @@ document.addEventListener('DOMContentLoaded', function(){
            
         
         }
+
+        let selectCat = document.querySelector("select");
+        selectCat.addEventListener("change",(event)=>{
+            portfolioCardContent = "";
+            for( let k in portfolioCardItem){
+
+              if(selectCat.options[selectCat.selectedIndex].innerHTML === portfolioCardItem[k].category){
+                let content = `<div  class="portfolio-card-item item col-lg-5" style="background:url('${portfolioCardItem[k].img}');" ><div class="card-item-content">
+                <h3>${portfolioCardItem[k].h3}</h3>
+                <p>${portfolioCardItem[k].p}
+                    <span>${portfolioCardItem[k].span}</span>
+                </p>
+               </div>
+               </div> `
+               portfolioCardContent += content;
+              }
+  
+            }
+            portfoliCardContainer.innerHTML =  portfolioCardContent;
+
+            console.log(selectCat.options[selectCat.selectedIndex].innerHTML);
+            
+            console.log(event.target);
+        });
+
 
         portfoliCardContainer.innerHTML =  portfolioCardContent;
 
@@ -313,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function(){
         // зациклить эту анимацию.
 
         let testSTR = document.querySelector(".scroling-more-p").innerHTML;
-         console.log(testSTR);
+         //console.log(testSTR);
 
         let arrStr = [];
         for(let s of testSTR){
@@ -323,33 +350,33 @@ document.addEventListener('DOMContentLoaded', function(){
           
         }
          let STRFromArr =  arrStr.join();
-         console.log(STRFromArr);
+         //console.log(STRFromArr);
          let STRFromArr2 = STRFromArr.replace(/[\.,%]/g, '');
-          console.log(STRFromArr2);
+          //console.log(STRFromArr2);
   
 
         let n = document.querySelector(".scroling-more-p");
-        console.log(n);
+        //console.log(n);
         n.innerHTML = STRFromArr2;
-        console.log(n.innerHTML);
-        console.log(typeof(n));
+        //console.log(n.innerHTML);
+        //console.log(typeof(n));
         let spanLetter = document.querySelectorAll('.span-js');
-        console.log(spanLetter[2]);
+        //console.log(spanLetter[2]);
 
 
             // (function(){
                 // spanLetter.forEach( (e,i) => {
-                //     console.log(i);
+                //     ////console.log(i);
             
 
 
 
                 // });
-                setTimeout(() => {
-                    for(let i = 0 ; i<= spanLetter.length;i++){
-                        spanLetter[i].classList.toggle("js-animation");
-                    }
-                }, 1000);
+                // setTimeout(() => {
+                //     for(let i = 0 ; i<= spanLetter.length;i++){
+                //         spanLetter[i].classList.toggle("js-animation");
+                //     }
+                // }, 1000);
                 // setTimeout(() => {
                 //     for(let i = 0 ; i<= spanLetter.length;i++){
                 //         spanLetter[i].classList.toggle("js-animation");
@@ -379,7 +406,7 @@ document.addEventListener('DOMContentLoaded', function(){
         
 
 
-        //     console.log(n);
+        //     //console.log(n);
 
 
 
@@ -408,13 +435,13 @@ document.addEventListener('DOMContentLoaded', function(){
         let scrolled = window.pageYOffset;
 
         if(scrolled>100 && scrolled > scrollPrev){
-            // console.log("aaa");
+            // //console.log("aaa");
             headerMenu.style.display = "none";
             document.querySelector(".registration-wrap").style.display = "none";
             document.querySelector(".search-button").style.display = "none";
 
         }else{
-            // console.log("bbb");
+            // //console.log("bbb");
             headerMenu.style.display = "flex";
             document.querySelector(".registration-wrap").style.display = "flex";
             document.querySelector(".search-button").style.display = "block";
@@ -422,6 +449,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
         scrollPrev = scrolled;
     });
+
+
+
 
 
 
@@ -433,5 +463,29 @@ document.addEventListener('DOMContentLoaded', function(){
 
 }
 })();
+
+let arrFormData = {};
+let buttonFormContactUS =  document.querySelector(".wrap-button");
+ 
+function sendDateForm(){
+
+
+     arrFormData = {
+        name:document.formContactUs.name.value,
+        email:document.formContactUs.email.value,
+        text:document.formContactUs.text.value,
+    };
+    console.log(arrFormData);
+}
+
+buttonFormContactUS.addEventListener("click",(el)=>{
+    el.preventDefault();
+    arrFormData = {
+        name:document.formContactUs.name.value,
+        email:document.formContactUs.email.value,
+        text:document.formContactUs.text.value,
+    };
+    console.log(arrFormData);
+});
 
 });
