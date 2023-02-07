@@ -181,10 +181,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
         //section portfolio card json начало
         let portfolioCardItem = data.portfolioCardItem;
-
-
+        let arrActiveValueCard = [];
+    
         let portfolioCardContent = "";
         for( let k in portfolioCardItem){
+            arrActiveValueCard.push(portfolioCardItem[k]);
 
 
             let content = `<div  class="portfolio-card-item item col-lg-5" style="background:url('${portfolioCardItem[k].img}');" ><div class="card-item-content">
@@ -199,13 +200,29 @@ document.addEventListener('DOMContentLoaded', function(){
            
         
         }
+        console.log(arrActiveValueCard);
+        function sortArr(arr){
+           arr.filter(function(e){
+            console.log(e.category);
+            console.log(selectCat.options[selectCat.selectedIndex].innerHTML);
+           return e.category == selectCat.options[selectCat.selectedIndex].innerHTML;
+
+            })
+            console.log(arr);
+            return arr
+        }
 
         let selectCat = document.querySelector("select");
         selectCat.addEventListener("change",(event)=>{
             portfolioCardContent = "";
+            let quantityCurrentCard = 0 ;
+          let a =  sortArr(arrActiveValueCard);
+            console.log(a);
             for( let k in portfolioCardItem){
 
               if(selectCat.options[selectCat.selectedIndex].innerHTML === portfolioCardItem[k].category){
+                quantityCurrentCard++;
+                // let x = portfolioCardItem[k].category;
                 let content = `<div  class="portfolio-card-item item col-lg-5" style="background:url('${portfolioCardItem[k].img}');" ><div class="card-item-content">
                 <h3>${portfolioCardItem[k].h3}</h3>
                 <p>${portfolioCardItem[k].p}
@@ -214,18 +231,34 @@ document.addEventListener('DOMContentLoaded', function(){
                </div>
                </div> `
                portfolioCardContent += content;
+
+               let paginationWrap = document.querySelector(".paggination-wrap");
+               console.log(paginationWrap);
               }
-  
             }
+
+
             portfoliCardContainer.innerHTML =  portfolioCardContent;
 
-            console.log(selectCat.options[selectCat.selectedIndex].innerHTML);
+            // console.log(selectCat.options[selectCat.selectedIndex].innerHTML);
             
-            console.log(event.target);
+            // console.log(event.target);
         });
+  
 
 
         portfoliCardContainer.innerHTML =  portfolioCardContent;
+
+            // переключение секций начало
+
+    // задать количество карточек для отображения (4), количество карточек разделить на 4 - значение номеров,
+    
+    // console.log(quantityCurrentCard);
+    let quantityCardShow = 4;
+    let quantityNumber = quantityCardShow/4;
+
+    // переключение секций конец
+
 
         let contentSTR = `<h2 id="feedbacks" class="feedbacksH2">feedbacks</h2>`;
          data.feedbacks.map(function(el){
@@ -455,10 +488,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
-    // Хэдер скрол исчезание-появление конец
 
-      
-        // если скрол активен то меню не видно, как только скрол перестает быть активным то меню появляется
 
 
 }
